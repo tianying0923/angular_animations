@@ -1,0 +1,14 @@
+<div class="wrap  clearfix">
+    <ul class="fl">
+        <li (click)="patternChange('auto')" [ngClass]="{'pattern':pattern==='auto'}">
+            <span>自动调用</span>
+        </li>
+        <li (click)="patternChange('manual')" [ngClass]="{'pattern':pattern==='manual'}">
+            <span>手动调用</span>
+        </li>
+    </ul>
+    <div class="fr">
+        <autocall-root *ngIf="pattern==='auto'"></autocall-root>
+        <manualcall-root *ngIf="pattern==='manual'"></manualcall-root>
+    </div>
+</div>
